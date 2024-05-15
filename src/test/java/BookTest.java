@@ -1,3 +1,4 @@
+import models.Book;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -34,6 +35,13 @@ public class BookTest {
     }
 
     @Test
+    public void canWantPrintMediaOverload(){
+        String result = "I'm in the mood for some reading - maybe I'll read Being There, or maybe Siddartha.";
+        String expected = book.wantPrintMedia("Siddartha");
+        assertThat(result).isEqualTo(expected);
+    }
+
+    @Test
     public void canRead(){
         String result = "I am reading Being There!";
         String expected = book.read();
@@ -42,22 +50,8 @@ public class BookTest {
 
     @Test
     public void canCountPages(){
-        String result = "This print media has 112 pages!";
+        String result = "This book has 112 pages!";
         String expected = book.countPages();
-        assertThat(result).isEqualTo(expected);
-    }
-
-    @Test
-    public void canSetAuthor(){
-        book.setAuthor("George Orwell");
-        String expected = "George Orwell";
-        assertThat(book.getAuthor()).isEqualTo(expected);
-    }
-
-    @Test
-    public void canGetAuthor(){
-        String result = "Jerzy Kosinski";
-        String expected = book.getAuthor();
         assertThat(result).isEqualTo(expected);
     }
 
@@ -114,6 +108,20 @@ public class BookTest {
     public void canGetPages(){
         int result = 112;
         int expected = book.getPages();
+        assertThat(result).isEqualTo(expected);
+    }
+
+    @Test
+    public void canSetAuthor(){
+        book.setAuthor("George Orwell");
+        String expected = "George Orwell";
+        assertThat(book.getAuthor()).isEqualTo(expected);
+    }
+
+    @Test
+    public void canGetAuthor(){
+        String result = "Jerzy Kosinski";
+        String expected = book.getAuthor();
         assertThat(result).isEqualTo(expected);
     }
 

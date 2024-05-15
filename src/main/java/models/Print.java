@@ -1,9 +1,11 @@
+package models;
+
 public abstract class Print {
 
     protected String title;
     protected String genre;
     protected double cost;
-    private int pages;
+    protected int pages;
 
     public Print(String title, String genre, double cost, int pages){
         this.title = title;
@@ -12,15 +14,16 @@ public abstract class Print {
         this.pages = pages;
     }
 
+//    abstract method
     public abstract String wantPrintMedia();
 
+//    this will now be an abstract method defined in an interface
     public String read(){
         return "I am reading " + this.title + "!";
     }
 
-    public String countPages(){
-        return "This print media has " + this.pages + " pages!";
-    }
+//    abstract method
+    public abstract String countPages();
 
     public String getTitle(){
         return this.title;
