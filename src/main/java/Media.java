@@ -2,6 +2,7 @@ import java.util.ArrayList;
 
 public class Media {
 
+//    collection of Print objects
     private ArrayList<Print> printMedia;
 
     public Media(){

@@ -19,16 +19,16 @@ public class Book extends Print{
         return "I really enjoyed " + this.title + ", what do you think?";
     }
 
-//    implementing abstract method from superclass
+//   method overloading
     public String wantPrintMedia() {
         return "I'm in the mood for some reading - maybe I'll read " + this.title;
     }
 
-//    overloading of abstract method
     public String wantPrintMedia(String alternativeBook){
         return "I'm in the mood for some reading - maybe I'll read " + this.title + ", or maybe " + alternativeBook + ".";
     }
 
+//    abstract method from the superclass defined in the subclass
     public String countPages(){
         return "This book has " + this.pages + " pages!";
     }

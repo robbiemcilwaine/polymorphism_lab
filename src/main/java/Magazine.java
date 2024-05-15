@@ -31,6 +31,7 @@ public class Magazine extends Print{
         this.contributors.add(contributor);
     }
 
+//    abstract method from the superclass defined in the subclass
     public String countPages(){
         return "This magazine has " + this.pages + " pages!";
     }
