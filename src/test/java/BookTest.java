@@ -1,4 +1,3 @@
-import models.Book;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -43,7 +42,7 @@ public class BookTest {
 
     @Test
     public void canRead(){
-        String result = "I am reading Being There!";
+        String result = "I'm reading a book - it's called Being There!";
         String expected = book.read();
         assertThat(result).isEqualTo(expected);
     }

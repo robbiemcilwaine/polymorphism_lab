@@ -1,4 +1,3 @@
-import models.Magazine;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -11,6 +10,13 @@ public class MagazineTest {
     @BeforeEach
     public void setUp(){
         magazine = new Magazine("BBC Good Food", "Food", 4.5, 90, "Christine Hayes");
+    }
+
+    @Test
+    public void canRead(){
+        String result = "I am reading a magazine - it's called BBC Good Food!";
+        String expected = magazine.read();
+        assertThat(result).isEqualTo(expected);
     }
 
     @Test

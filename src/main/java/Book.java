@@ -1,5 +1,3 @@
-package models;
-
 public class Book extends Print{
 
     String author;
@@ -7,6 +5,10 @@ public class Book extends Print{
     public Book(String title, String genre, double cost, int pages, String author) {
         super(title, genre, cost, pages);
         this.author = author;
+    }
+
+    public String read(){
+        return "I'm reading a book - it's called " + this.title + "!";
     }
 
     public String judgeByItsCover(){

@@ -1,6 +1,3 @@
-import models.Book;
-import models.Media;
-import models.Print;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

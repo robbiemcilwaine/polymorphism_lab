@@ -1,5 +1,3 @@
-package models;
-
 import java.util.ArrayList;
 
 public class Magazine extends Print{
@@ -13,6 +11,11 @@ public class Magazine extends Print{
         this.articles = new ArrayList<>();
         this.contributors = new ArrayList<>();
         this.editor = editor;
+    }
+
+//    implementing the abstract read method from the superclass
+    public String read(){
+        return "I am reading a magazine - it's called " + this.title + "!";
     }
 
 //    implementing abstract method from superclass

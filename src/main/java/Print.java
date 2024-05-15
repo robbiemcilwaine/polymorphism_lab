@@ -1,5 +1,3 @@
-package models;
-
 public abstract class Print {
 
     protected String title;
@@ -14,17 +12,18 @@ public abstract class Print {
         this.pages = pages;
     }
 
-//    abstract method
-    public abstract String wantPrintMedia();
+    //    implementing the abstract read method from the superclass
+//    public abstract String read(int rating);
+
+    //    abstract method
+//    public abstract String wantPrintMedia();
 
 //    this will now be an abstract method defined in an interface
-    public String read(){
-        return "I am reading " + this.title + "!";
-    }
 
 //    abstract method
     public abstract String countPages();
 
+//    setter and getter methods
     public String getTitle(){
         return this.title;
     }
