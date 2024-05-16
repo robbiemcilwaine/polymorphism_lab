@@ -1,4 +1,4 @@
-public class Book extends Print{
+public class Book extends Print implements IRead{
 
     String author;
 

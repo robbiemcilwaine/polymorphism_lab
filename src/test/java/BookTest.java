@@ -27,14 +27,14 @@ public class BookTest {
     }
 
     @Test
-    public void canWantPrintMedia(){
+    public void canWantPrintMedia__withoutArguments(){
         String result = "I'm in the mood for some reading - maybe I'll read Being There";
         String expected = book.wantPrintMedia();
         assertThat(result).isEqualTo(expected);
     }
 
     @Test
-    public void canWantPrintMediaOverload(){
+    public void canWantPrintMedia__withArguments(){
         String result = "I'm in the mood for some reading - maybe I'll read Being There, or maybe Siddartha.";
         String expected = book.wantPrintMedia("Siddartha");
         assertThat(result).isEqualTo(expected);

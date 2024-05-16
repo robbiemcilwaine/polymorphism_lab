@@ -16,6 +16,10 @@ public abstract class Print {
 //    abstract method
     public abstract String countPages();
 
+    public String read(){
+        return "";
+    }
+
 //    setter and getter methods
     public String getTitle(){
         return this.title;
